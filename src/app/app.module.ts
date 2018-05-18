@@ -17,6 +17,7 @@ import {LayoutComponent} from './layout/layout.component';
 import {SettingsComponent} from './settings/settings.component';
 import {ShowPrivateKeyComponent} from './show-private-key/show-private-key.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -34,13 +35,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         SetPinCodeComponent,
         LayoutComponent,
         SettingsComponent,
-        ShowPrivateKeyComponent
+        ShowPrivateKeyComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         // Material
         BrowserAnimationsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatSidenavModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

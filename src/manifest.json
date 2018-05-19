@@ -1,0 +1,7 @@
+{
+  "name": "Ic Nano Wallet",
+  "short_name": "Ic Nano Wallet",
+  "start_url": "./",
+  "display": "standalone",
+  "description": "Ic Nano Wallet"
+}

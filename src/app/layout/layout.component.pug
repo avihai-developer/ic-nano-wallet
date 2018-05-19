@@ -1,9 +1,21 @@
 .page-layout-wrapper
-	mat-toolbar
-		button(mat-icon-button, (click)='sidenav.toggle()')
-			mat-icon menu
 	mat-sidenav-container
-		mat-sidenav(#sidenav='', mode="side")
-			h1 Menu
+		mat-sidenav(#sidenav='', [mode]="sideNavMode", [opened]="isSideBarOpen")
+			.sidenav-header
+			button(mat-button, routerLink='/layout/history', (click)='isMobile ? sidenav.toggle() : ""')
+				mat-icon history
+				.text History
+			button(mat-button, routerLink='/layout/send', (click)='isMobile ? sidenav.toggle() : ""')
+				mat-icon send
+				.text Send
+			button(mat-button, routerLink='/layout/receive', (click)='isMobile ? sidenav.toggle() : ""')
+				mat-icon save_alt
+				.text Receive
+			button(mat-button, routerLink='/layout/settings', (click)='isMobile ? sidenav.toggle() : ""')
+				mat-icon settings
+				.text Settings
 		mat-sidenav-content
+			mat-toolbar
+				button(*ngIf='isMobile', mat-icon-button, (click)='sidenav.toggle()')
+					mat-icon menu
 			router-outlet

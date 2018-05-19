@@ -1,7 +1,37 @@
+@import "../../colors";
 .page-layout-wrapper {
 	width: 100%;
 	height: 100%;
+	mat-toolbar {
+		background-color: $color-primary;
+		mat-icon {
+			color: white;
+		}
+	}
 	mat-sidenav-container {
 		height: 100%;
+		mat-sidenav {
+			-webkit-box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.1);
+			-moz-box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.1);
+			box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.1);
+			.sidenav-header {
+				height: 128px;
+				background-color: $color-primary;
+			}
+			button {
+				display: block;
+				width: 100%;
+				mat-icon {
+					width: 30px;
+					text-align: center;
+					margin-right: 16px;
+				}
+				.text {
+					width: 70px;
+					text-align: left;
+					display: inline-block;
+				}
+			}
+		}
 	}
 }

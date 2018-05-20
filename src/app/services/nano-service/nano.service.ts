@@ -5,6 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class NanoService {
 
+  private _seed;
+  private _privateKey;
+  private _publicKey;
+
   constructor() { }
 
     createNewWallet() {
@@ -23,12 +27,27 @@ export class NanoService {
 
     }
 
-    getPublicKey() {
-
+    get seed() {
+        return this._seed;
     }
 
-    getPrivateKey() {
-
+    set seed(value) {
+        this._seed = value;
     }
 
+    get privateKey() {
+        return this._privateKey;
+    }
+
+    set privateKey(value) {
+        this._privateKey = value;
+    }
+
+    get publicKey() {
+        return this._publicKey;
+    }
+
+    set publicKey(value) {
+        this._publicKey = value;
+    }
 }

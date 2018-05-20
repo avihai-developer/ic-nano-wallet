@@ -23,11 +23,11 @@ export class NanoService {
 
     }
 
-    getPublicAddress() {
+    getPublicKey() {
 
     }
 
-    getPrivateAddress() {
+    getPrivateKey() {
 
     }
 

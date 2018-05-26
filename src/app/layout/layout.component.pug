@@ -2,6 +2,7 @@
 	mat-sidenav-container
 		mat-sidenav(#sidenav='', [mode]="sideNavMode", [opened]="isSideBarOpen")
 			.sidenav-header
+				.title IC Nano wallet
 			button(mat-button, routerLink='/layout/history', (click)='isMobile ? sidenav.toggle() : ""')
 				mat-icon history
 				.text History
@@ -16,6 +17,10 @@
 				.text Settings
 		mat-sidenav-content
 			mat-toolbar
-				button(*ngIf='isMobile', mat-icon-button, (click)='sidenav.toggle()')
-					mat-icon menu
+				mat-toolbar-row
+					button(*ngIf='isMobile', mat-icon-button, (click)='sidenav.toggle()')
+						mat-icon menu
+					.title {{title}}
+				mat-toolbar-row
+					.balance Balance: 0 NANO
 			router-outlet

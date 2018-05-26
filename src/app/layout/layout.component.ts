@@ -1,4 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
     selector: 'app-layout',
@@ -12,9 +14,18 @@ export class LayoutComponent implements OnInit {
     isMobile: boolean;
     sideNavMode: string;
     isSideBarOpen: boolean;
+    title: string;
 
-    constructor() {
+    constructor(
+        private titleService: Title,
+        private router: Router
+    ) {
         this.handleSideBar();
+        this.router.events.subscribe((val) => {
+            if (val instanceof NavigationEnd) {
+                this.title = this.titleService.getTitle();
+            }
+        });
     }
 
     ngOnInit() {

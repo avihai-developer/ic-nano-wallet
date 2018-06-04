@@ -1,24 +1,33 @@
-a(routerLink='/terms-of-use') terms-of-use
-br
-a(routerLink='/about') about
-br
-a(routerLink='/login-or-register') login-or-register
-br
-a(routerLink='/login') login
-br
-a(routerLink='/register') register
-br
-a(routerLink='/set-pin-code') set-pin-code
-br
-a(routerLink='/enter-pin-code') enter-pin-code
-br
-a(routerLink='/layout/history') history
-br
-a(routerLink='/layout/send') send
-br
-a(routerLink='/layout/receive') receive
-br
-a(routerLink='/layout/settings') settings
-br
-a(routerLink='/layout/show-private-key') show-private-key
-br
+//a(routerLink='/terms-of-use') terms-of-use
+//br
+//a(routerLink='/about') about
+//br
+//a(routerLink='/login-or-register') login-or-register
+//br
+//a(routerLink='/login') login
+//br
+//a(routerLink='/register') register
+//br
+//a(routerLink='/set-pin-code') set-pin-code
+//br
+//a(routerLink='/enter-pin-code') enter-pin-code
+//br
+//a(routerLink='/layout/history') history
+//br
+//a(routerLink='/layout/send') send
+//br
+//a(routerLink='/layout/receive') receive
+//br
+//a(routerLink='/layout/settings') settings
+//br
+//a(routerLink='/layout/show-private-key') show-private-key
+//br
+.page-terms-of-use-wrapper
+	mat-toolbar
+		.title Terms Of Use
+	.center
+		.body
+			p Ic Nano wallet is free open source wallet that being developed by developers from the nano community
+			| We will do out best to protect your coins but we can't take responsibility for any lose.
+			p.red I accept that Ic Nano Wallet is not responsible for any lose of coins or any other damage that will happen by using this app.
+		button.accept(mat-raised-button) Accept

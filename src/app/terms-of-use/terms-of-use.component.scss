@@ -1,0 +1,49 @@
+@import "../../colors";
+.page-terms-of-use-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(#ffffff, #f7f7f7);
+	text-align: center;
+	mat-toolbar {
+		background-color: $color-primary;
+		color: white;
+		.title {
+			margin: 0 auto;
+		}
+	}
+	.center {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		.body {
+			width: 70vw;
+			max-width: 300px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			font-size: 22px;
+			.red {
+				color: #ef5350;
+			}
+		}
+		button.accept {
+			margin-top: 16px;
+			color: white;
+			background-color: $color-primary;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.page-terms-of-use-wrapper {
+		.center {
+			.body {
+				font-size: 18px;
+			}
+		}
+	}
+}
